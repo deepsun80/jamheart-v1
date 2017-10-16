@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.sideBar{
+  min-width: 230px;
+  margin-left: -15px;
+  padding-top: 40px;
+  padding-left: 32px;
+  height: 100vh;
+  background: #fafafa;
+}
+
+a {
+  background-color: transparent !important;
+}
+a:hover {
+  color: black !important;
+}
+a:focus {
+  color: black !important;
+}
+
+.componentLink a {
+  font-size: 14px;
+  line-height: 14px;
+  color: #818181;
+}
+
+.socialMedia a {
+  font-size: 12px;
+  line-height: 14px;
+  color: #b2b2b2;
+}
+
+.fa {
+  margin-right: 25px;
+}
+.fa-facebook {
+  color: #607ab3;
+  width: 7px;
+  height: 14px;
+  margin-right: 32px;
+}
+.fa-youtube-play {
+  color: #f63840;
+  width: 14px;
+  height: 10px;
+}
+.fa-soundcloud {
+  color: #ff7800;
+  width: 14px;
+  height: 6px;
+}
+.fa-spotify {
+  color: #00e370;
+  width: 14px;
+  height: 14px;
+}
+
+.channelButton{
+  margin-top: 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 12px;
+  padding: 11px 30px;
+  background-image: linear-gradient(to right, #8aefff, #00ffe1);
+}
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
