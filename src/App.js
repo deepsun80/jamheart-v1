@@ -27,7 +27,7 @@ const App = (props) => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={4} mdPush={4}>
+                <Col>
                   <UserAuth />
                 </Col>
               </Row>
@@ -45,7 +45,7 @@ const App = (props) => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={4} mdPush={4}>
+                <Col md={4}>
                   <UserAuth />
                 </Col>
               </Row>
@@ -63,7 +63,7 @@ const App = (props) => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={4} mdPush={4}>
+                <Col md={4}>
                   <UserAuth />
                 </Col>
               </Row>
@@ -81,7 +81,7 @@ const App = (props) => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={4} mdPush={4}>
+                <Col md={4}>
                   <UserAuth />
                 </Col>
               </Row>
@@ -99,7 +99,7 @@ const App = (props) => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={4} mdPush={4}>
+                <Col md={4}>
                   <UserAuth />
                 </Col>
               </Row>
@@ -117,7 +117,7 @@ const App = (props) => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={4} mdPush={4}>
+                <Col md={4}>
                   <UserAuth />
                 </Col>
               </Row>
@@ -135,7 +135,7 @@ const App = (props) => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={4} mdPush={4}>
+                <Col md={4}>
                   <UserAuth />
                 </Col>
               </Row>
@@ -153,7 +153,7 @@ const App = (props) => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={4} mdPush={4}>
+                <Col md={4}>
                   <UserAuth />
                 </Col>
               </Row>
@@ -168,7 +168,7 @@ const App = (props) => {
           <div>
             <SideBar />
             <Row>
-              <Col md={4} mdPush={4}>
+              <Col md={4}>
                 <UserAuth />
               </Col>
             </Row>
