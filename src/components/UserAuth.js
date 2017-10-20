@@ -1,7 +1,8 @@
 import React from 'react';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
 
-import '../style.css';
+import '../style/style.css';
+import '../style/userAuth.css';
 
 const UserAuth = () => {
     return(

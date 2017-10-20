@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import { setLinkValue } from '../actions';
 import { bindActionCreators } from 'redux';
 
-import '../style.css';
+import '../style/style.css';
+import '../style/sideBar.css';
 
 class SideBar extends Component {
     handleValueOne = () => {

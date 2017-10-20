@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Panel, Row, Col, Button } from 'react-bootstrap';
 
-import '../style.css';
+import '../style/style.css';
+import '../style/dashBoard.css';
 
 class DashBoard extends Component {
     render() {

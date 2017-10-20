@@ -15,7 +15,7 @@ import SoundCloud from './components/socialmedia/SoundCloud';
 import Spotify from './components/socialmedia/Spotify';
 import HypeM from './components/socialmedia/HypeM';
 
-import './style.css';
+import './style/style.css';
 
 const App = (props) => {
     switch (props.linkValue) {

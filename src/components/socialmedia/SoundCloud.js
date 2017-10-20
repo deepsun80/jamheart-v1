@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../style.css';
+import '../../style/style.css';
 
 class SoundCloud extends Component {
     render() {

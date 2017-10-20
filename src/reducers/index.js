@@ -10,18 +10,9 @@ const linkValueReducer = (linkValue = 1, action) => {
     }
 }
 
-// const feedPageValueReducer = (feedPageValue = null, action) => {
-//     switch (action.type) {
-//         case SET_FEED_PAGE_VALUE:
-//             return action.payload;
-//         default:
-//             return feedPageValue;
-//     }
-// }
 
 const rootReducer = combineReducers({
     linkValue: linkValueReducer,
-    //feedPageValue: feedPageValueReducer
 });
 
 export default rootReducer;
