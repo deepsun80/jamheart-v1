@@ -7,21 +7,22 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import ReduxPromise from 'redux-promise';
 import reducers from './reducers';
+
+import configureStore from './store';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+const store = configureStore();
 
 ReactDOM.render(
-        <Provider store={createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
+        <Provider store={store}>
             <Router>
                 <div>
                     <Route exact path="/" component={Login}/>
                     <Route path="/app" component={App}/>
                 </div>
-            </Router> 
+            </Router>
         </Provider>,
     document.getElementById('root'));
 registerServiceWorker();
