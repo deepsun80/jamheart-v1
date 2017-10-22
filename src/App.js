@@ -176,7 +176,7 @@ const App = (props) => {
               <DashBoard />
             </Row>
           </div>
-        ); 
+        );
     }
 }
 

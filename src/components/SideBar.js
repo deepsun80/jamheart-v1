@@ -37,7 +37,7 @@ class SideBar extends Component {
         return (
             <Nav pullLeft stacked activeKey={this.props.linkValue} className="sideBar">
               <div style={{display: 'flex', paddingBottom: 50}}>
-                <i class="fa fa-music fa-3x" aria-hidden="true"></i>
+                <i className="fa fa-music fa-3x" aria-hidden="true"></i>
                 <h4 style={{ fontWeight:700, marginLeft: 10, paddingTop: 10 }}>JAMHEART</h4>
               </div>
               <NavItem
@@ -113,18 +113,9 @@ class SideBar extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        linkValue: state.linkValue
-    };
-};
-// const mapStateToProps = ({ linkValue }) => {
-//   const { linkValue } = linkValueReducer;
-//   return { linkValue };
-// }
-
-// const mapDispatchToProps = (dispatch) => {
-//    return bindActionCreators({ setLinkValueAsync }, dispatch);
-// };
+const mapStateToProps = ({ linkValueReducer }) => {
+  const { linkValue } = linkValueReducer;
+  return { linkValue };
+}
 
 export default connect(mapStateToProps, { setLinkValueAsync } )(SideBar);

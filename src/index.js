@@ -6,23 +6,20 @@ import Login from './Login';
 import registerServiceWorker from './registerServiceWorker';
 
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reducers from './reducers';
+import { configureStore } from './store';
 
-import configureStore from './store';
-
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const store = configureStore();
 
 ReactDOM.render(
         <Provider store={store}>
-            <Router>
-                <div>
-                    <Route exact path="/" component={Login}/>
-                    <Route path="/app" component={App}/>
-                </div>
-            </Router>
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/" component={Login}/>
+              <Route path="/app" component={App}/>
+            </Switch>
+          </BrowserRouter>
         </Provider>,
     document.getElementById('root'));
 registerServiceWorker();
