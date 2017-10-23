@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Nav, NavItem, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 import { connect } from 'react-redux';
 import { setLinkValueAsync } from '../actions';
@@ -40,18 +41,14 @@ class SideBar extends Component {
                 <i className="fa fa-music fa-3x" aria-hidden="true"></i>
                 <h4 style={{ fontWeight:700, marginLeft: 10, paddingTop: 10 }}>JAMHEART</h4>
               </div>
-              <NavItem
-                eventKey={1}
-                onClick={this.handleValueOne}
-                className="componentLink"
-                href="/app/dashboard">
-                Dashboard
-              </NavItem>
+              <LinkContainer to="/app/dashboard">
+                <NavItem eventKey={1}>Dashboard</NavItem>
+              </LinkContainer>
               <NavItem
                 eventKey={2}
                 onClick={this.handleValueTwo}
                 className="componentLink"
-                href="/app/feed">
+              href="/app/feed">
                 Feed
               </NavItem>
               <NavItem
@@ -122,7 +119,7 @@ const mapStateToProps = ({ linkValueReducer }) => {
 }
 
 // const mapDispatchToProps = (dispatch) => {
-//    return bindActionCreators({ setLinkValueAsync }, dispatch); 
+//    return bindActionCreators({ setLinkValueAsync }, dispatch);
 // };
 
 export default connect(mapStateToProps, { setLinkValueAsync } )(SideBar);
