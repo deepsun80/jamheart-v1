@@ -1,13 +1,13 @@
 # JamHeart Frontend
 
-# Getting Started
+### Getting Started
 * create using create-react-app 
 * clone repo
 * npm start to run react app - app will run on localhost:3000 in browser
 * localhost:3000 - Home Login page
 * localhost:3000/app - App page
 
-# File Locations
+### File Locations
 * icons & logos in public/logos folder
 * index.html in public folder
 * js components in src folder
@@ -17,7 +17,7 @@
 * redux actions and reducers in respective folders in src
 * CSS styles in src/styles folder
 
-# Component Functionalities
+### Component Functionalities
 * redux store initialized in index.js
 * Index.js ras two react-router-dom routes, Login.js and App.js
 * Login.js path for signup/signin screen, data passed from Redux store via axios calls (in src/actions)
