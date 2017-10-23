@@ -1,7 +1,7 @@
 # JamHeart Frontend
 
 ### Getting Started
-* create using create-react-app 
+* created using create-react-app 
 * clone repo
 * npm start to run react app - app will run on localhost:3000 in browser
 * localhost:3000 - Home Login page

@@ -6,22 +6,30 @@ import Login from './Login';
 import registerServiceWorker from './registerServiceWorker';
 
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import ReduxPromise from 'redux-promise';
-import reducers from './reducers';
+import { configureStore } from './store';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+import DashBoard from './components/DashBoard';
+import Feed from './components/Feed';
+import Favorites from './components/Favorites';
+
+const store = configureStore();
 
 ReactDOM.render(
-        <Provider store={createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
-            <Router>
-                <div>
-                    <Route exact path="/" component={Login}/>
-                    <Route path="/app" component={App}/>
-                </div>
-            </Router> 
+        <Provider store={store}>
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/" component={Login}/>
+              <Route path="/app" component={App}>
+                 <Switch>
+                  <Route path="/dashboard" component={DashBoard}/>
+                  <Route path="/favorites" component={Favorites}/>
+                  <Route path="/feed" component={Feed}/>
+                </Switch>
+              </Route>
+            </Switch>
+          </BrowserRouter>
         </Provider>,
     document.getElementById('root'));
 registerServiceWorker();

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 import { connect } from 'react-redux';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import UserAuth from './components/UserAuth';
 import DashBoard from './components/DashBoard';
@@ -17,167 +19,32 @@ import HypeM from './components/socialmedia/HypeM';
 
 import './style/style.css';
 
-const App = (props) => {
-    switch (props.linkValue) {
-      case 1:
-        return (
-          <div>
-            <Col md={4}>
-              <SideBar />
+class App extends Component {
+  render() {
+    return(
+      <div>
+        <Col md={4}>
+          <SideBar />
+        </Col>
+        <Col md={8}>
+          <Row>
+            <Col>
+              <UserAuth />
             </Col>
-            <Col md={8}>
-              <Row>
-                <Col>
-                  <UserAuth />
-                </Col>
-              </Row>
-              <Row>
-                <DashBoard />
-              </Row>
-            </Col>
-          </div>
-        );
-      case 2:
-        return (
-          <div>
-            <Col md={4}>
-              <SideBar />
-            </Col>
-            <Col md={8}>
-              <Row>
-                <Col md={4}>
-                  <UserAuth />
-                </Col>
-              </Row>
-              <Row>
-                <Feed />
-              </Row>
-            </Col>
-          </div>
-        );
-      case 3:
-        return (
-          <div>
-            <Col md={4}>
-              <SideBar />
-            </Col>
-            <Col md={8}>
-              <Row>
-                <Col md={4}>
-                  <UserAuth />
-                </Col>
-              </Row>
-              <Row>
-                <Favorites />
-              </Row>
-            </Col>
-          </div>
-        );
-      case 4:
-        return (
-          <div>
-            <Col md={4}>
-              <SideBar />
-            </Col>
-            <Col md={8}>
-              <Row>
-                <Col md={4}>
-                  <UserAuth />
-                </Col>
-              </Row>
-              <Row>
-                <Facebook />
-              </Row>
-            </Col>
-          </div>
-        );
-      case 5:
-        return (
-          <div>
-            <Col md={4}>
-              <SideBar />
-            </Col>
-            <Col md={8}>
-              <Row>
-                <Col md={4}>
-                  <UserAuth />
-                </Col>
-              </Row>
-              <Row>
-                <YouTube />
-              </Row>
-            </Col>
-          </div>
-        );
-      case 6:
-        return (
-          <div>
-            <Col md={4}>
-              <SideBar />
-            </Col>
-            <Col md={8}>
-              <Row>
-                <Col md={4}>
-                  <UserAuth />
-                </Col>
-              </Row>
-              <Row>
-                <SoundCloud />
-              </Row>
-            </Col>
-          </div>
-        );
-      case 7:
-        return (
-          <div>
-            <Col md={4}>
-              <SideBar />
-            </Col>
-            <Col md={8}>
-              <Row>
-                <Col md={4}>
-                  <UserAuth />
-                </Col>
-              </Row>
-              <Row>
-                <Spotify />
-              </Row>
-            </Col>
-          </div>
-        );
-      case 8:
-        return (
-          <div>
-            <Col md={4}>
-              <SideBar />
-            </Col>
-            <Col md={8}>
-              <Row>
-                <Col md={4}>
-                  <UserAuth />
-                </Col>
-              </Row>
-              <Row>
-                <HypeM />
-              </Row>
-            </Col>
-          </div>
-        );
-      default:
-        return (
-          <div>
-            <SideBar />
-            <Row>
-              <Col md={4}>
-                <UserAuth />
-              </Col>
-            </Row>
-            <Row>
-              <DashBoard />
-            </Row>
-          </div>
-        ); 
-    }
+          </Row>
+          <Row>
+            {/* <BrowserRouter>
+              <div>
+                <Route path="/dashboard" component={DashBoard}/>
+                <Route path="/favorites" component={Favorites}/>
+                <Route path="/feed" component={Feed}/>
+              </div>
+            </BrowserRouter> */}
+          </Row>
+        </Col>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state) => {
