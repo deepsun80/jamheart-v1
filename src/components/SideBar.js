@@ -4,6 +4,7 @@ import { Nav, NavItem, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { setLinkValueAsync } from '../actions';
 // import { bindActionCreators } from 'redux';
+import { LinkContainer } from 'react-router-bootstrap';
 
 import '../style/style.css';
 import '../style/sideBar.css';
@@ -40,27 +41,30 @@ class SideBar extends Component {
                 <i className="fa fa-music fa-3x" aria-hidden="true"></i>
                 <h4 style={{ fontWeight:700, marginLeft: 10, paddingTop: 10 }}>JAMHEART</h4>
               </div>
-              <NavItem
-                eventKey={1}
-                onClick={this.handleValueOne}
-                className="componentLink"
-                href="/app/dashboard">
-                Dashboard
-              </NavItem>
-              <NavItem
-                eventKey={2}
-                onClick={this.handleValueTwo}
-                className="componentLink"
-                href="/app/feed">
-                Feed
-              </NavItem>
-              <NavItem
-                eventKey={3}
-                onClick={this.handleValueThree}
-                className="componentLink"
-                href="/app/favorites">
-                Favorites
-              </NavItem>
+              <LinkContainer to="/app/dashboard">
+                <NavItem
+                  eventKey={1}
+                  onClick={this.handleValueOne}
+                  className="componentLink">
+                    Dashboard
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer to="/app/feed">
+                <NavItem
+                  eventKey={2}
+                  onClick={this.handleValueTwo}
+                  className="componentLink">
+                    Feed
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer to="/app/favorites">
+                <NavItem
+                  eventKey={3}
+                  onClick={this.handleValueThree}
+                  className="componentLink">
+                    Favorites
+                </NavItem>
+              </LinkContainer>
               <h6 style={{
                 marginTop: 55,
                 marginBottom: 24,
