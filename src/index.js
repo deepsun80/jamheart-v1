@@ -21,10 +21,10 @@ ReactDOM.render(
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={Login}/>
-              <Route exact path="/app" component={App}/>
+              <Route path="/app" component={App}/>
               <Route path="/app/dashboard" component={DashBoard}/>
               <Route path="/app/favorites" component={Favorites}/>
-              <Route path="/app/feed" component={Feed}/>
+              <Route path="/app/feed" component={Feed}/> 
             </Switch>
           </BrowserRouter>
         </Provider>,

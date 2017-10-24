@@ -19,32 +19,30 @@ import HypeM from './components/socialmedia/HypeM';
 
 import './style/style.css';
 
-class App extends Component {
-  render() {
+const App = () => {
     return(
       <div>
-        <Col md={4}>
+        <Col md={2}>
           <SideBar />
         </Col>
-        <Col md={8}>
+        <Col md={10}>
           <Row>
             <Col>
               <UserAuth />
             </Col>
           </Row>
           <Row>
-            {/* <BrowserRouter>
-              <div>
-                <Route path="/dashboard" component={DashBoard}/>
-                <Route path="/favorites" component={Favorites}/>
-                <Route path="/feed" component={Feed}/>
-              </div>
-            </BrowserRouter> */}
+             {/* <BrowserRouter>
+              <Switch>
+                  <Route path="/dashboard" component={DashBoard}/>
+                  <Route path="/favorites" component={Favorites}/>
+                  <Route path="/feed" component={Feed}/>
+              </Switch>
+            </BrowserRouter>  */}
           </Row>
         </Col>
       </div>
     );
-  }
 }
 
 const mapStateToProps = (state) => {

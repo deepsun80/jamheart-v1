@@ -39,32 +39,35 @@ class SideBar extends Component {
             <Nav
               // activeKey={this.props.linkValue}
               activeKey="1"
-            className="sideBar">
+              className="sideBar">
               <div style={{display: 'flex', paddingBottom: 50}}>
                 <i className="fa fa-music fa-3x" aria-hidden="true"></i>
                 <h4 style={{ fontWeight:700, marginLeft: 10, paddingTop: 10 }}>JAMHEART</h4>
               </div>
-              <NavItem
-                eventKey={1}
-                onClick={this.handleValueOne}
-                className="componentLink"
-              href="/app/dashboard">
-                Dashboard
-              </NavItem>
-              <NavItem
-                eventKey={2}
-                onClick={this.handleValueTwo}
-                className="componentLink"
-              href="/app/feed">
-                Feed
-              </NavItem>
-              <NavItem
-                eventKey={3}
-                onClick={this.handleValueThree}
-                className="componentLink"
-              href="/app/favorites">
-                Favorites
-              </NavItem>
+              <LinkContainer to="dashboard">
+                <NavItem
+                  eventKey={1}
+                  onClick={this.handleValueOne}
+                  className="componentLink">
+                    Dashboard
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer to="feed">
+                <NavItem
+                  eventKey={2}
+                  onClick={this.handleValueTwo}
+                  className="componentLink">
+                    Feed
+                </NavItem>
+              </LinkContainer>
+              <LinkContainer to="favorites">
+                <NavItem
+                  eventKey={3}
+                  onClick={this.handleValueThree}
+                  className="componentLink">
+                  Favorites
+                </NavItem>
+              </LinkContainer>
               <h6 style={{
                 marginTop: 55,
                 marginBottom: 24,
