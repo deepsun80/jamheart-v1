@@ -10,12 +10,12 @@ import '../style/style.css';
 import '../style/sideBar.css';
 
 class SideBar extends Component {
-    handleValueOne = () => {
-        this.props.setLinkValueAsync(1);
-    }
-    handleValueTwo = () => {
-        this.props.setLinkValueAsync(2);
-    }
+    // handleValueOne = () => {
+    //     this.props.setLinkValueAsync(1);
+    // }
+    // handleValueTwo = () => {
+    //     this.props.setLinkValueAsync(2);
+    // }
     handleValueThree = () => {
         this.props.setLinkValueAsync(3);
     }
@@ -36,35 +36,35 @@ class SideBar extends Component {
     }
     render() {
         return (
-            <Nav pullLeft stacked activeKey={this.props.linkValue} className="sideBar">
+            <Nav
+              // activeKey={this.props.linkValue}
+              activeKey="1"
+            className="sideBar">
               <div style={{display: 'flex', paddingBottom: 50}}>
                 <i className="fa fa-music fa-3x" aria-hidden="true"></i>
                 <h4 style={{ fontWeight:700, marginLeft: 10, paddingTop: 10 }}>JAMHEART</h4>
               </div>
-              <LinkContainer to="/app/dashboard">
-                <NavItem
-                  eventKey={1}
-                  onClick={this.handleValueOne}
-                  className="componentLink">
-                    Dashboard
-                </NavItem>
-              </LinkContainer>
-              <LinkContainer to="/app/feed">
-                <NavItem
-                  eventKey={2}
-                  onClick={this.handleValueTwo}
-                  className="componentLink">
-                    Feed
-                </NavItem>
-              </LinkContainer>
-              <LinkContainer to="/app/favorites">
-                <NavItem
-                  eventKey={3}
-                  onClick={this.handleValueThree}
-                  className="componentLink">
-                    Favorites
-                </NavItem>
-              </LinkContainer>
+              <NavItem
+                eventKey={1}
+                onClick={this.handleValueOne}
+                className="componentLink"
+              href="/app/dashboard">
+                Dashboard
+              </NavItem>
+              <NavItem
+                eventKey={2}
+                onClick={this.handleValueTwo}
+                className="componentLink"
+              href="/app/feed">
+                Feed
+              </NavItem>
+              <NavItem
+                eventKey={3}
+                onClick={this.handleValueThree}
+                className="componentLink"
+              href="/app/favorites">
+                Favorites
+              </NavItem>
               <h6 style={{
                 marginTop: 55,
                 marginBottom: 24,
@@ -77,7 +77,7 @@ class SideBar extends Component {
               <NavItem
                 eventKey={4}
                 onClick={this.handleValueFour}
-                className="socialMedia">
+              className="socialMedia">
                 <div style={{ display: 'inline-block', marginRight: 7 }}>
                   <img src="/logos/facebook-small.svg" alt="facebook" width="7px" height="14px" />
                 </div>
@@ -86,28 +86,28 @@ class SideBar extends Component {
               <NavItem
                 eventKey={5}
                 onClick={this.handleValueFive}
-                className="socialMedia">
+              className="socialMedia">
                 <img src="/logos/youtube-small.svg" alt="youtube" width="14px" height="10px" />
                 YouTube
               </NavItem>
               <NavItem
                 eventKey={6}
                 onClick={this.handleValueSix}
-                className="socialMedia">
+              className="socialMedia">
                 <img src="/logos/soundcloud-small.svg" alt="soundcloud" width="14px" height="6px" />
                 SoundCloud
               </NavItem>
               <NavItem
                 eventKey={7}
                 onClick={this.handleValueSeven}
-                className="socialMedia">
+              className="socialMedia">
                 <img src="/logos/spotify-small.svg" alt="spotify" width="14px" height="14px" />
                 Spotify
               </NavItem>
               <NavItem
                 eventKey={8}
                 onClick={this.handleValueEight}
-                className="socialMedia">
+              className="socialMedia">
                 <img src="/logos/hype-machine-small.svg" alt="hypem" width="14px" height="10px" />
                 HypeM
               </NavItem>
@@ -126,7 +126,7 @@ const mapStateToProps = ({ linkValueReducer }) => {
 }
 
 // const mapDispatchToProps = (dispatch) => {
-//    return bindActionCreators({ setLinkValueAsync }, dispatch); 
+//    return bindActionCreators({ setLinkValueAsync }, dispatch);
 // };
 
 export default connect(mapStateToProps, { setLinkValueAsync } )(SideBar);
